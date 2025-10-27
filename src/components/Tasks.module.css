@@ -168,3 +168,41 @@
   border: 1px solid rgba(255,255,255,0.06);
   cursor: pointer;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 40vh;       /* sesuaikan tinggi maksimum */
+  overflow-y: auto;
+  padding-right: 8px;     /* ruang untuk scrollbar */
+}
+
+/* beri sedikit padding bawah agar item terakhir tidak nempel ke tepi */
+.list > *:last-child {
+  padding-bottom: 12px;
+}
+
+/* buat tombol Save/Batal tetap terlihat saat scroll */
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(rgba(201,75,75,0.0), rgba(201,75,75,0.03));
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* pastikan form punya padding bawah agar tidak tertutup */
+.addForm {
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px; /* ekstra ruang untuk sticky area */
+}
+
